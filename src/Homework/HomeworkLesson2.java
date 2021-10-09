@@ -4,9 +4,6 @@
  * @date 7/10/2021
  */
 
-
-package Homework;
-
 public class HomeworkLesson2 {
     public static void main(String[] args) {
         System.out.println(сheckAmount(5, 15));
@@ -23,18 +20,16 @@ public class HomeworkLesson2 {
 
     static boolean сheckAmount(int a, int b) {
         int c = a + b;
-        if (c >= 10 && c <= 20) return true;
-        return false;
+        return c >= 10 && c<= 20;
+
     }
 
     static void checkPlusOrMinus(int a) {
-        if (a >= 0) System.out.println("Passed a positive number");
-        else System.out.println("Passed a negative number");
+        System.out.println(a >= 0? "Passed a positive number" : "Passed a negative number");
     }
 
-    static boolean checkTrueOrFalse(int a) {;
-        if (a <= 0) return true;
-        return false;
+    static boolean checkTrueOrFalse(int a) {
+        return a <= 0;
     }
 
     static void printString(String text, int b) {

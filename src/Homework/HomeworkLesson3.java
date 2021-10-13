@@ -4,8 +4,6 @@
  * @date 13/10/2021
  */
 
-package Homework;
-
 import java.util.Arrays;
 
 public class HomeworkLesson3{

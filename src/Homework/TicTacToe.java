@@ -1,3 +1,9 @@
+/**
+ * Java_1 Homework 3
+ * @author Kalabekov Soslan
+ * @date 18/10/2021
+ */
+
 import java.util.Random;
 import java.util.Scanner;
 

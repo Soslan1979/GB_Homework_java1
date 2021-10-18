@@ -1,5 +1,5 @@
 /*
- * Java_1 Homework 3
+ * Java_1 TicTacToe
  * @author Kalabekov Soslan
  * @date 18/10/2021
  */

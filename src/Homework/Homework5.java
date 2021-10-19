@@ -4,8 +4,6 @@
  * @date 19/10/2021
  */
 
-package Homework;
-
 public class Homework5 {
     public static void main(String[] args) {
         Worker[] workersArray = new Worker[5];

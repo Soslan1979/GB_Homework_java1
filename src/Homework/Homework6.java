@@ -4,7 +4,6 @@
  * @date 22/10/2021
  */
 
-package Homework;
 
 public class Homework6 {
     public static void main(String[] args) {

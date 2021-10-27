@@ -4,9 +4,9 @@ public class Homework7 {
     public static void main(String[] args) {
         Cat2 catMatroskin = new Cat2("Matroskin", 6);
         System.out.println(catMatroskin);
-        Cat2 catLeopold = new Cat2("Leopold", 4);
+        Cat2 catLeopold = new Cat2("Leopold", 5);
         System.out.println(catLeopold);
-        Cat2 catTom = new Cat2("Tom", 3);
+        Cat2 catTom = new Cat2("Tom", 4);
         System.out.println(catTom);
 
         Plate plate = new Plate(12);

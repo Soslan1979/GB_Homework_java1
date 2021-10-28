@@ -1,9 +1,13 @@
-package Homework;
+/*
+ * Java_1 Homework 7
+ * @author Kalabekov Soslan
+ * @date 28/10/2021
+ */
 
 public class Homework7 {
     public static void main(String[] args) {
-        Cat2[] cats = {new Cat2("Matroskin", 400), new Cat2("Leopold", 500), new Cat2("Tom", 300)};
-        for (Cat2 cat : cats) {
+        Cat[] cats = {new Cat("Matroskin", 400), new Cat("Leopold", 500), new Cat("Tom", 300)};
+        for (Cat cat : cats) {
             System.out.println(cat.toString());
         }
 
@@ -27,12 +31,12 @@ public class Homework7 {
     }
 }
 
-class Cat2 {
+class Cat {
     private String name;
     private int appetite;
     private boolean fullnes;
 
-    Cat2(String name, int appetite) {
+    Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
         this.fullnes = false;

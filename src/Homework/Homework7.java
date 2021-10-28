@@ -2,26 +2,27 @@ package Homework;
 
 public class Homework7 {
     public static void main(String[] args) {
-        Cat2 catMatroskin = new Cat2("Matroskin", 6);
-        System.out.println(catMatroskin);
-        Cat2 catLeopold = new Cat2("Leopold", 5);
-        System.out.println(catLeopold);
-        Cat2 catTom = new Cat2("Tom", 4);
-        System.out.println(catTom);
+        Cat2[] cats = {new Cat2("Matroskin", 400), new Cat2("Leopold", 500), new Cat2("Tom", 300)};
+        for (Cat2 cat : cats) {
+            System.out.println(cat.toString());
+        }
 
-        Plate plate = new Plate(12);
+        Plate plate = new Plate(1100);
         System.out.println(plate);
+        System.out.println("Cats start to eat");
 
-        catMatroskin.eat(plate);
-        catLeopold.eat(plate);
-        catTom.eat(plate);
-        System.out.println(plate);
-        plate.increaseFood();
-        System.out.println(plate);
+        for (Cat2 cat : cats) {
+            cat.eat(plate);
+            System.out.println(cat);
+        }
 
-        catMatroskin.eat(plate);
-        catLeopold.eat(plate);
-        catTom.eat(plate);
+          plate.increaseFood();
+
+        System.out.println("Cats are starting to eat again");
+        for (Cat2 cat : cats) {
+            cat.eat(plate);
+            System.out.println(cat);
+        }
         System.out.println(plate);
     }
 }
@@ -29,33 +30,29 @@ public class Homework7 {
 class Cat2 {
     private String name;
     private int appetite;
-    private int satiety;
+    private boolean fullnes;
 
     Cat2(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
-        this.satiety = 0;
+        this.fullnes = false;
 
     }
-
-    int getSatiety() {
-        return satiety;
-    }
-
-    void setSatiety(int satiety) {
-        this.satiety = satiety;
-    }
-
 
     void eat(Plate plate) {
-        plate.decreaseFood(appetite);
+        if (appetite > plate.getFood()) {
+            System.out.println("Not enough food for the cat " + name);
+        }
+        else {
+            plate.decreaseFood(appetite);
+            fullnes = true;
+        }
     }
 
     @Override
     public  String toString() {
-        return "Cat " + name + ", eat: " + appetite + " " + satiety;
+        return "Cat " + name + ", eat: " + appetite + " grams "  + " " +  " Fullnes: " + fullnes;
     }
-
 }
 
 class Plate {
@@ -76,13 +73,13 @@ class Plate {
     }
 
     int increaseFood() {
-        this.food += 15;
-        System.out.println("On the plate reported 15");
+        this.food += 1500;
+        System.out.println("On the plate reported 1500 grams");
         return food;
     }
 
     @Override
     public  String toString() {
-        return "Plate: " + food;
+        return "Now in the plate: " + food + " grams";
     }
 }

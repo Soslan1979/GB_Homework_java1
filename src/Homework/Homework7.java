@@ -8,7 +8,7 @@ public class Homework7 {
     public static void main(String[] args) {
         Cat[] cats = {new Cat("Matroskin", 400), new Cat("Leopold", 500), new Cat("Tom", 300)};
         for (Cat cat : cats) {
-            System.out.println(cat.toString());
+            System.out.println(cat);
         }
 
         Plate plate = new Plate(1100);

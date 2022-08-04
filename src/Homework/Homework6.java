@@ -7,9 +7,9 @@
 
 public class Homework6 {
     public static void main(String[] args) {
-        Cat cat = new Cat("Matroskin", 200, 0);
+        Cat cat = new Cat("Matroskin", 200, 0);//getAnimalDistanceRun и getAnimalDistanceSwim
         Dog dog = new Dog("Sharik", 500, 10);
-        System.out.println(cat.Run(110));
+        System.out.println(cat.Run(110)); //distanceRunCat 
         System.out.println(cat.Run(210));
         System.out.println(cat.Swim(10));
         System.out.println(dog.Run(250));
